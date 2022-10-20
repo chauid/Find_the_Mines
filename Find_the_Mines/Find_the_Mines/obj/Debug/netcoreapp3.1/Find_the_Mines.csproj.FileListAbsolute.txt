@@ -1,0 +1,17 @@
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.csproj.AssemblyReference.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.csproj.GenerateResource.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.AssemblyInfoInputs.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.AssemblyInfo.cs
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.csproj.CoreCompileInputs.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.exe
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.deps.json
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.runtimeconfig.json
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.runtimeconfig.dev.json
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.dll
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\bin\Debug\netcoreapp3.1\Find_the_Mines.pdb
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.dll
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.pdb
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.genruntimeconfig.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.Manual.resources
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.MainForm.resources
