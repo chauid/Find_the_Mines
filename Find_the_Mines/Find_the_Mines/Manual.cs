@@ -67,7 +67,7 @@ namespace Find_the_Mines
             for (int i = 0; i < rules; i++) labels[i].Text = rulestr[i];
             for (int i = 0; i < rules; i++) Console.WriteLine("{0},\"{1}\"\n", labels[i].Name, labels[i].Text); //Debug
             for (int i = 0; i < rules; i++) if (Max_fontsize < labels[i].Width) { Max_fontsize = labels[i].Width; Max_width_labelinedex = i; }
-            asdf(Max_fontsize, height, labels[Max_width_labelinedex].Width);
+            width_change(Max_fontsize, height, labels[Max_width_labelinedex].Width);
 
 
             Console.WriteLine("Manual 폼 실행됨."); //Debug
@@ -83,7 +83,7 @@ namespace Find_the_Mines
             Console.WriteLine("Manual 폼 종료됨."); //Debug
         }
 
-        public void asdf(int width, int height , int backpanel_width)
+        public void width_change(int width, int height , int backpanel_width)
         {
             Console.WriteLine(backpanel_width);
             this.ClientSize = new Size(width + backpanel_width-100, height); 
