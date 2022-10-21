@@ -10,7 +10,22 @@ using System.Windows.Forms;
 
 namespace Find_the_Mines
 {
-    ///
+    public partial class AA
+    {
+        private int a = 1;
+        public void method1(int a=1)
+        {
+            Console.WriteLine("a= {0}", a);
+        }
+    }
+    public partial class AA
+    {
+        private int b = 2;
+        public void method2()
+        {
+            Console.WriteLine("a= {0}", a);
+        }
+    }
     public partial class MainForm : Form
     {
         private void LayerSet()
@@ -46,6 +61,8 @@ namespace Find_the_Mines
 
         private void ShowManual_Click(object sender, EventArgs e)
         {
+            AA aa = new AA();
+            aa.method1();
             Form Man = Application.OpenForms["Manual"];
             if (Man == null)
             {
