@@ -30,7 +30,6 @@ namespace Find_the_Mines
             GameScreen.Size = new Size(Screen.Width - 40, Screen.Height - 170);
             GameScreen.BackColor = GameScreenColor;
             GameScreen.BringToFront();
-            int i = 1;
         }
         public MainForm()
         {
