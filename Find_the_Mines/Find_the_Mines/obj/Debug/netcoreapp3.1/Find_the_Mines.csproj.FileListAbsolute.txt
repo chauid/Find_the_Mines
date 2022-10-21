@@ -32,3 +32,4 @@ C:\Users\ebune\Desktop\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\ne
 C:\Users\ebune\Desktop\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.dll
 C:\Users\ebune\Desktop\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.pdb
 C:\Users\ebune\Desktop\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.genruntimeconfig.cache
+E:\WorkSpace\GitHub\Find_the_Mines\Find_the_Mines\Find_the_Mines\obj\Debug\netcoreapp3.1\Find_the_Mines.Difficulty.resources

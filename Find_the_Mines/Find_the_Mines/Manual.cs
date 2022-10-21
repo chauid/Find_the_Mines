@@ -61,10 +61,8 @@ namespace Find_the_Mines
             Labelset(labels);
             for (int i = 0; i < rules; i++) labels[i].Text = rulestr[i];
             for (int i = 0; i < rules; i++) Console.WriteLine("{0},\"{1}\"\n", labels[i].Name, labels[i].Text); //Debug
-
             Console.WriteLine("Manual 폼 실행됨."); //Debug
         }
-
         private void Manual_SizeChanged(object sender, EventArgs e)
         {
             Layerset();
