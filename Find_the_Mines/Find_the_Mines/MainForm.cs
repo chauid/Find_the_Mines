@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Find_the_Mines
 {
     ///
+        
     public partial class MainForm : Form
     {
         private void LayerSet()
@@ -49,7 +50,8 @@ namespace Find_the_Mines
             Form Man = Application.OpenForms["Manual"];
             if (Man == null)
             {
-                Manual manual = new Manual(400, 400);
+                Manual manual = new Manual();
+
                 manual.Show();
             }
             else Man.Close();
