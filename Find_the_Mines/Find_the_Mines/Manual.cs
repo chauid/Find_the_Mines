@@ -86,7 +86,7 @@ namespace Find_the_Mines
         public void width_change(int width, int height , int backpanel_width)
         {
             Console.WriteLine(backpanel_width);
-            this.ClientSize = new Size(width + backpanel_width-100, height); 
+            this.ClientSize = new Size(width + backpanel_width-100, height+200); 
         }
 
     }
