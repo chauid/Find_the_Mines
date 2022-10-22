@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gLegCZlXGuduASVuTKQtjSXWFUl4JVOZxJkkvmshvUP2C/bmL0Jh3odSOZ0e4ltKPgjL7pJ98OEPRy2pdt/0BQ==",
+  "dgSpecHash": "isLAYjzgvC94xIFxo2IBrwrtzEIPNvGXrUYRVRGn15RnMmgE/oQk6nUoMPdrwe3PydD2mrjDY1ImWagxWNEdhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebune\\Desktop\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ebune\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.29\\microsoft.netcore.app.host.win-x64.3.1.29.nupkg.sha512",
-    "C:\\Users\\ebune\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\ebune\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\ebune\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "E:\\WorkSpace\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
