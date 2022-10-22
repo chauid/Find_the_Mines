@@ -33,5 +33,12 @@ namespace Find_the_Mines
             }
             else Man.Close();
         }
+
+        private void Difficulty_Click(object sender, EventArgs e)
+        {
+            GameOption Option = new GameOption();
+            Option.Show();
+            //Option.ReturnSizeInt += new GameOption.getSize(getBoardSize);
+        }
     }
 }

@@ -37,8 +37,10 @@ namespace Find_the_Mines
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Game = new System.Windows.Forms.ToolStripMenuItem();
             this.Setting = new System.Windows.Forms.ToolStripMenuItem();
-            this.Infomation = new System.Windows.Forms.ToolStripMenuItem();
             this.Difficulty = new System.Windows.Forms.ToolStripMenuItem();
+            this.Infomation = new System.Windows.Forms.ToolStripMenuItem();
+            this.게임정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.First_Layer.SuspendLayout();
             this.Screen.SuspendLayout();
             this.DropMenu.SuspendLayout();
@@ -46,6 +48,7 @@ namespace Find_the_Mines
             // 
             // First_Layer
             // 
+            this.First_Layer.Controls.Add(this.label1);
             this.First_Layer.Controls.Add(this.ShowManual);
             this.First_Layer.Controls.Add(this.Screen);
             this.First_Layer.Controls.Add(this.DropMenu);
@@ -111,17 +114,35 @@ namespace Find_the_Mines
             this.Setting.Size = new System.Drawing.Size(43, 20);
             this.Setting.Text = "설정";
             // 
+            // Difficulty
+            // 
+            this.Difficulty.Name = "Difficulty";
+            this.Difficulty.Size = new System.Drawing.Size(126, 22);
+            this.Difficulty.Text = "게임 설정";
+            this.Difficulty.Click += new System.EventHandler(this.Difficulty_Click);
+            // 
             // Infomation
             // 
+            this.Infomation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.게임정보ToolStripMenuItem});
             this.Infomation.Name = "Infomation";
             this.Infomation.Size = new System.Drawing.Size(43, 20);
             this.Infomation.Text = "정보";
             // 
-            // Difficulty
+            // 게임정보ToolStripMenuItem
             // 
-            this.Difficulty.Name = "Difficulty";
-            this.Difficulty.Size = new System.Drawing.Size(180, 22);
-            this.Difficulty.Text = "난이도 설정";
+            this.게임정보ToolStripMenuItem.Name = "게임정보ToolStripMenuItem";
+            this.게임정보ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.게임정보ToolStripMenuItem.Text = "게임 정보";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(690, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
             // MainForm
             // 
@@ -153,6 +174,8 @@ namespace Find_the_Mines
         private System.Windows.Forms.ToolStripMenuItem Setting;
         private System.Windows.Forms.ToolStripMenuItem Infomation;
         private System.Windows.Forms.ToolStripMenuItem Difficulty;
+        private System.Windows.Forms.ToolStripMenuItem 게임정보ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }
 
