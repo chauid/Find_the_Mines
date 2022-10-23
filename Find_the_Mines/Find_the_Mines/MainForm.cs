@@ -41,10 +41,11 @@ namespace Find_the_Mines
             {
                 GameOption Option = new GameOption();
                 Option.Owner = this;
-                Option.Location = new Point(0, 0);
-                Option.SetBoard(BoardSize);
+                Option.StartPosition = FormStartPosition.CenterParent;
+                Option.SetBoard(BoardSize, IsSound);
                 Option.OptionReturnSize += OptionToMainBoardSize;
-                Option.Show();
+                Option.OptionReturnSound += OptionToMainIsSound;
+                Option.ShowDialog();
             }
             else Opt.BringToFront();
         }

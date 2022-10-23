@@ -13,10 +13,16 @@ namespace Find_the_Mines
     public partial class MainForm
     {
         private int BoardSize = 12; //기본보드판 크기 : 12 x 12
-        private void OptionToMainBoardSize(int size)
+        private bool IsSound = true; // 사운드 기본값 : 켜기
+        private void OptionToMainBoardSize(int size) // 보드판 사이즈 이벤트 핸들러
         {
             BoardSize = size;
             Console.WriteLine("현재 보드 크기 : {0}", BoardSize);
+        }
+        private void OptionToMainIsSound(bool sound)
+        {
+            IsSound = sound;
+            Console.WriteLine("현재 소리 켜기 : {0}", IsSound);
         }
         private void ButtonArrayInit(params Button[] buttons)
         {

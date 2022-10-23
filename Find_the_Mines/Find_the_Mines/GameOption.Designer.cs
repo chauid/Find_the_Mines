@@ -30,10 +30,10 @@ namespace Find_the_Mines
         private void InitializeComponent()
         {
             this.Difficulty = new System.Windows.Forms.GroupBox();
-            this._32Button = new System.Windows.Forms.RadioButton();
-            this._24Button = new System.Windows.Forms.RadioButton();
-            this._16Button = new System.Windows.Forms.RadioButton();
-            this._12Button = new System.Windows.Forms.RadioButton();
+            this.x32Button = new System.Windows.Forms.RadioButton();
+            this.x24Button = new System.Windows.Forms.RadioButton();
+            this.x16Button = new System.Windows.Forms.RadioButton();
+            this.x12Button = new System.Windows.Forms.RadioButton();
             this.OKButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SoundCheckBox = new System.Windows.Forms.CheckBox();
@@ -42,10 +42,10 @@ namespace Find_the_Mines
             // 
             // Difficulty
             // 
-            this.Difficulty.Controls.Add(this._32Button);
-            this.Difficulty.Controls.Add(this._24Button);
-            this.Difficulty.Controls.Add(this._16Button);
-            this.Difficulty.Controls.Add(this._12Button);
+            this.Difficulty.Controls.Add(this.x32Button);
+            this.Difficulty.Controls.Add(this.x24Button);
+            this.Difficulty.Controls.Add(this.x16Button);
+            this.Difficulty.Controls.Add(this.x12Button);
             this.Difficulty.Location = new System.Drawing.Point(23, 25);
             this.Difficulty.Name = "Difficulty";
             this.Difficulty.Size = new System.Drawing.Size(451, 180);
@@ -53,49 +53,49 @@ namespace Find_the_Mines
             this.Difficulty.TabStop = false;
             this.Difficulty.Text = "플레이 세트";
             // 
-            // _32Button
+            // x32Button
             // 
-            this._32Button.AutoSize = true;
-            this._32Button.Location = new System.Drawing.Point(50, 114);
-            this._32Button.Name = "_32Button";
-            this._32Button.Size = new System.Drawing.Size(67, 19);
-            this._32Button.TabIndex = 3;
-            this._32Button.Text = "32 x 32";
-            this._32Button.UseVisualStyleBackColor = true;
-            this._32Button.CheckedChanged += new System.EventHandler(this._32Button_CheckedChanged);
+            this.x32Button.AutoSize = true;
+            this.x32Button.Location = new System.Drawing.Point(50, 114);
+            this.x32Button.Name = "x32Button";
+            this.x32Button.Size = new System.Drawing.Size(67, 19);
+            this.x32Button.TabIndex = 3;
+            this.x32Button.Text = "32 x 32";
+            this.x32Button.UseVisualStyleBackColor = true;
+            this.x32Button.CheckedChanged += new System.EventHandler(this.x32Button_CheckedChanged);
             // 
-            // _24Button
+            // x24Button
             // 
-            this._24Button.AutoSize = true;
-            this._24Button.Location = new System.Drawing.Point(50, 88);
-            this._24Button.Name = "_24Button";
-            this._24Button.Size = new System.Drawing.Size(67, 19);
-            this._24Button.TabIndex = 2;
-            this._24Button.Text = "24 x 24";
-            this._24Button.UseVisualStyleBackColor = true;
-            this._24Button.CheckedChanged += new System.EventHandler(this._24Button_CheckedChanged);
+            this.x24Button.AutoSize = true;
+            this.x24Button.Location = new System.Drawing.Point(50, 88);
+            this.x24Button.Name = "x24Button";
+            this.x24Button.Size = new System.Drawing.Size(67, 19);
+            this.x24Button.TabIndex = 2;
+            this.x24Button.Text = "24 x 24";
+            this.x24Button.UseVisualStyleBackColor = true;
+            this.x24Button.CheckedChanged += new System.EventHandler(this.x24Button_CheckedChanged);
             // 
-            // _16Button
+            // x16Button
             // 
-            this._16Button.AutoSize = true;
-            this._16Button.Location = new System.Drawing.Point(50, 62);
-            this._16Button.Name = "_16Button";
-            this._16Button.Size = new System.Drawing.Size(67, 19);
-            this._16Button.TabIndex = 1;
-            this._16Button.Text = "16 x 16";
-            this._16Button.UseVisualStyleBackColor = true;
-            this._16Button.CheckedChanged += new System.EventHandler(this._16Button_CheckedChanged);
+            this.x16Button.AutoSize = true;
+            this.x16Button.Location = new System.Drawing.Point(50, 62);
+            this.x16Button.Name = "x16Button";
+            this.x16Button.Size = new System.Drawing.Size(67, 19);
+            this.x16Button.TabIndex = 1;
+            this.x16Button.Text = "16 x 16";
+            this.x16Button.UseVisualStyleBackColor = true;
+            this.x16Button.CheckedChanged += new System.EventHandler(this.x16Button_CheckedChanged);
             // 
-            // _12Button
+            // x12Button
             // 
-            this._12Button.AutoSize = true;
-            this._12Button.Location = new System.Drawing.Point(50, 36);
-            this._12Button.Name = "_12Button";
-            this._12Button.Size = new System.Drawing.Size(67, 19);
-            this._12Button.TabIndex = 0;
-            this._12Button.Text = "12 x 12";
-            this._12Button.UseVisualStyleBackColor = true;
-            this._12Button.CheckedChanged += new System.EventHandler(this._12Button_CheckedChanged);
+            this.x12Button.AutoSize = true;
+            this.x12Button.Location = new System.Drawing.Point(50, 36);
+            this.x12Button.Name = "x12Button";
+            this.x12Button.Size = new System.Drawing.Size(67, 19);
+            this.x12Button.TabIndex = 0;
+            this.x12Button.Text = "12 x 12";
+            this.x12Button.UseVisualStyleBackColor = true;
+            this.x12Button.CheckedChanged += new System.EventHandler(this.x12Button_CheckedChanged);
             // 
             // OKButton
             // 
@@ -137,7 +137,7 @@ namespace Find_the_Mines
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.Difficulty);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GameOption";
             this.Text = "설정";
             this.Difficulty.ResumeLayout(false);
@@ -150,12 +150,12 @@ namespace Find_the_Mines
         #endregion
 
         private System.Windows.Forms.GroupBox Difficulty;
-        private System.Windows.Forms.RadioButton _24Button;
-        private System.Windows.Forms.RadioButton _16Button;
-        private System.Windows.Forms.RadioButton _12Button;
+        private System.Windows.Forms.RadioButton x24Button;
+        private System.Windows.Forms.RadioButton x16Button;
+        private System.Windows.Forms.RadioButton x12Button;
         private System.Windows.Forms.Button OKButton;
         private new System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.RadioButton _32Button;
+        private System.Windows.Forms.RadioButton x32Button;
         private System.Windows.Forms.CheckBox SoundCheckBox;
     }
 }
