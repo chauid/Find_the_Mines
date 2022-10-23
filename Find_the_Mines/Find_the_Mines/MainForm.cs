@@ -31,14 +31,22 @@ namespace Find_the_Mines
                 Manual manual = new Manual(400, 400);
                 manual.Show();
             }
-            else Man.Close();
+            else Man.BringToFront();
         }
 
         private void Difficulty_Click(object sender, EventArgs e)
         {
-            GameOption Option = new GameOption();
-            Option.Show();
-            //Option.ReturnSizeInt += new GameOption.getSize(getBoardSize);
+            Form Opt = Application.OpenForms["GameOption"];
+            if (Opt == null)
+            {
+                GameOption Option = new GameOption();
+                Option.Owner = this;
+                Option.Location = new Point(0, 0);
+                Option.SetBoard(BoardSize);
+                Option.OptionReturnSize += OptionToMainBoardSize;
+                Option.Show();
+            }
+            else Opt.BringToFront();
         }
     }
 }

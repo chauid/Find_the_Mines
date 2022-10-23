@@ -10,15 +10,14 @@ namespace Find_the_Mines
 {
     public partial class GameOption
     {
-        private int BoardSize; //기본보드판 크기 : 12 x 12
-        private bool OptionCheck = false;
-        public delegate void getSize(int size);
-        public event EventHandler ReturnSizeInt;
+        private int setBoardSize;
+        public delegate void SendBoardsize(int size);
+        public event SendBoardsize OptionReturnSize;
 
-        public void SetBoard(int size = 12)
+        public void SetBoard(int size)
         {
-            BoardSize = size;
-            switch(BoardSize)
+            setBoardSize = size;
+            switch(setBoardSize)
             {
                 case 12:
                     _12Button.Checked = true;

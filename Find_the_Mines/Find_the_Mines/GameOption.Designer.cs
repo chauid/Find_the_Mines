@@ -36,6 +36,7 @@ namespace Find_the_Mines
             this._12Button = new System.Windows.Forms.RadioButton();
             this.OKButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.SoundCheckBox = new System.Windows.Forms.CheckBox();
             this.Difficulty.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,10 +117,23 @@ namespace Find_the_Mines
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // SoundCheckBox
+            // 
+            this.SoundCheckBox.AutoSize = true;
+            this.SoundCheckBox.Checked = true;
+            this.SoundCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SoundCheckBox.Location = new System.Drawing.Point(62, 226);
+            this.SoundCheckBox.Name = "SoundCheckBox";
+            this.SoundCheckBox.Size = new System.Drawing.Size(78, 19);
+            this.SoundCheckBox.TabIndex = 2;
+            this.SoundCheckBox.Text = "소리 켜기";
+            this.SoundCheckBox.UseVisualStyleBackColor = true;
+            // 
             // GameOption
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(500, 400);
+            this.Controls.Add(this.SoundCheckBox);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.Difficulty);
@@ -129,6 +143,7 @@ namespace Find_the_Mines
             this.Difficulty.ResumeLayout(false);
             this.Difficulty.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,5 +156,6 @@ namespace Find_the_Mines
         private System.Windows.Forms.Button OKButton;
         private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.RadioButton _32Button;
+        private System.Windows.Forms.CheckBox SoundCheckBox;
     }
 }

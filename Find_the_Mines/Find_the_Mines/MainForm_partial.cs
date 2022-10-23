@@ -12,7 +12,12 @@ namespace Find_the_Mines
 {
     public partial class MainForm
     {
-        private int BoardSize;
+        private int BoardSize = 12; //기본보드판 크기 : 12 x 12
+        private void OptionToMainBoardSize(int size)
+        {
+            BoardSize = size;
+            Console.WriteLine("현재 보드 크기 : {0}", BoardSize);
+        }
         private void ButtonArrayInit(params Button[] buttons)
         {
             Console.WriteLine("");
@@ -36,10 +41,5 @@ namespace Find_the_Mines
             GameScreen.BringToFront();
         }
 
-        public void getBoardSize(int size)
-        {
-            BoardSize = size;
-            Console.WriteLine("boardsize={0}", BoardSize);
-        }
     }
 }
