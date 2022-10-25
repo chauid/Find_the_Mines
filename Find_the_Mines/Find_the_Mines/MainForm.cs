@@ -19,26 +19,5 @@ namespace Find_the_Mines
             LayerSet(); // 초기 패널 설정
             Console.WriteLine("Main 폼 실행됨."); //Debug
         }
-        private void MainForm_SizeChanged(object sender, EventArgs e)
-        {
-            LayerSet();
-        }
-        private void ShowManual_Click(object sender, EventArgs e)
-        {
-            Form Man = Application.OpenForms["Manual"];
-            if (Man == null)
-            {
-                Manual manual = new Manual(400, 400);
-                manual.Show();
-            }
-            else Man.Close();
-        }
-
-        private void Difficulty_Click(object sender, EventArgs e)
-        {
-            GameOption Option = new GameOption();
-            Option.Show();
-            //Option.ReturnSizeInt += new GameOption.getSize(getBoardSize);
-        }
     }
 }

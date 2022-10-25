@@ -7,6 +7,9 @@
     <Compile Update="GameOption_partial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Information_game.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
