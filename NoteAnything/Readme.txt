@@ -17,12 +17,6 @@ Poject_NameSpace
                 '''
             }
         }
-        private EventHandle(이벤트)
-        {
-            '''
-            AA useAA = new AA();
-            useAA.AA_1();
-        }
     }
 }
 
@@ -63,6 +57,13 @@ partial class FormClass 사용자 정의 메소드
         '''
     }
     폼 클래스 메소드 선언 및 구현
+    
+    private EventHandle(이벤트)
+    {
+        '''
+        AA useAA = new AA();
+        useAA.AA_1();
+    }
 }
 
 
