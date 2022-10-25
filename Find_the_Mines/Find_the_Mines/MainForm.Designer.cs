@@ -159,7 +159,7 @@ namespace Find_the_Mines
             // Difficulty
             // 
             this.Difficulty.Name = "Difficulty";
-            this.Difficulty.Size = new System.Drawing.Size(126, 22);
+            this.Difficulty.Size = new System.Drawing.Size(180, 22);
             this.Difficulty.Text = "게임 설정";
             this.Difficulty.Click += new System.EventHandler(this.Difficulty_Click);
             // 
@@ -174,8 +174,9 @@ namespace Find_the_Mines
             // 게임정보ToolStripMenuItem
             // 
             this.게임정보ToolStripMenuItem.Name = "게임정보ToolStripMenuItem";
-            this.게임정보ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.게임정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.게임정보ToolStripMenuItem.Text = "게임 정보";
+            this.게임정보ToolStripMenuItem.Click += new System.EventHandler(Information);
             // 
             // MainForm
             // 

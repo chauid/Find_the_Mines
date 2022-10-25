@@ -61,5 +61,11 @@ namespace Find_the_Mines
         {
             if (e.KeyCode == Keys.Enter) ChatSend_Click(sender,e);
         }
+
+        private void Information(object sender, EventArgs e)
+        {
+            Information_game info = new Information_game();
+            info.Show();
+        }
     }
 }
