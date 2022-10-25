@@ -33,8 +33,7 @@ namespace Find_the_Mines
             }
             else Man.BringToFront();
         }
-
-        private void Difficulty_Click(object sender, EventArgs e)
+        private void OptionButton_Click(object sender, EventArgs e)
         {
             Form Opt = Application.OpenForms["GameOption"];
             if (Opt == null)
@@ -42,12 +41,27 @@ namespace Find_the_Mines
                 GameOption Option = new GameOption();
                 Option.Owner = this;
                 Option.StartPosition = FormStartPosition.CenterParent;
-                Option.SetBoard(BoardSize, IsSound);
-                Option.OptionReturnSize += OptionToMainBoardSize;
-                Option.OptionReturnSound += OptionToMainIsSound;
+                Option.SetBoard(BoardSize, IsSound, this.ClientSize);
+                Option.OptionReturnSetting += OptionToMainSetting;
                 Option.ShowDialog();
             }
             else Opt.BringToFront();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyCode)
+            {
+                case Keys.Control:
+                    switch(e.KeyCode)
+                    {
+                        case Keys.O:
+                            Console.WriteLine("key : {0}", e.KeyCode);
+                            this.OptionButton.Click += new System.EventHandler(this.OptionButton_Click);
+                            break;
+                    }
+                    break;
+            }
         }
     }
 }

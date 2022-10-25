@@ -31,24 +31,24 @@ namespace Find_the_Mines
         {
             this.First_Layer = new System.Windows.Forms.Panel();
             this.ShowManual = new System.Windows.Forms.Button();
-            this.Screen = new System.Windows.Forms.Panel();
+            this.BackScreen = new System.Windows.Forms.Panel();
             this.GameScreen = new System.Windows.Forms.Panel();
             this.DropMenu = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Game = new System.Windows.Forms.ToolStripMenuItem();
             this.Setting = new System.Windows.Forms.ToolStripMenuItem();
-            this.Difficulty = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptionButton = new System.Windows.Forms.ToolStripMenuItem();
             this.Infomation = new System.Windows.Forms.ToolStripMenuItem();
             this.게임정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.First_Layer.SuspendLayout();
-            this.Screen.SuspendLayout();
+            this.BackScreen.SuspendLayout();
             this.DropMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // First_Layer
             // 
             this.First_Layer.Controls.Add(this.ShowManual);
-            this.First_Layer.Controls.Add(this.Screen);
+            this.First_Layer.Controls.Add(this.BackScreen);
             this.First_Layer.Controls.Add(this.DropMenu);
             this.First_Layer.Location = new System.Drawing.Point(0, 0);
             this.First_Layer.Name = "First_Layer";
@@ -65,13 +65,13 @@ namespace Find_the_Mines
             this.ShowManual.UseVisualStyleBackColor = true;
             this.ShowManual.Click += new System.EventHandler(this.ShowManual_Click);
             // 
-            // Screen
+            // BackScreen
             // 
-            this.Screen.Controls.Add(this.GameScreen);
-            this.Screen.Location = new System.Drawing.Point(51, 36);
-            this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(482, 500);
-            this.Screen.TabIndex = 1;
+            this.BackScreen.Controls.Add(this.GameScreen);
+            this.BackScreen.Location = new System.Drawing.Point(51, 36);
+            this.BackScreen.Name = "BackScreen";
+            this.BackScreen.Size = new System.Drawing.Size(482, 500);
+            this.BackScreen.TabIndex = 1;
             // 
             // GameScreen
             // 
@@ -107,17 +107,17 @@ namespace Find_the_Mines
             // Setting
             // 
             this.Setting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Difficulty});
+            this.OptionButton});
             this.Setting.Name = "Setting";
             this.Setting.Size = new System.Drawing.Size(43, 20);
             this.Setting.Text = "설정";
             // 
-            // Difficulty
+            // OptionButton
             // 
-            this.Difficulty.Name = "Difficulty";
-            this.Difficulty.Size = new System.Drawing.Size(126, 22);
-            this.Difficulty.Text = "게임 설정";
-            this.Difficulty.Click += new System.EventHandler(this.Difficulty_Click);
+            this.OptionButton.Name = "OptionButton";
+            this.OptionButton.Size = new System.Drawing.Size(126, 22);
+            this.OptionButton.Text = "게임 설정";
+            this.OptionButton.Click += new System.EventHandler(this.OptionButton_Click);
             // 
             // Infomation
             // 
@@ -138,13 +138,15 @@ namespace Find_the_Mines
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.First_Layer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.DropMenu;
             this.Name = "MainForm";
             this.Text = "지뢰찾기";
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.First_Layer.ResumeLayout(false);
             this.First_Layer.PerformLayout();
-            this.Screen.ResumeLayout(false);
+            this.BackScreen.ResumeLayout(false);
             this.DropMenu.ResumeLayout(false);
             this.DropMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -154,7 +156,7 @@ namespace Find_the_Mines
         #endregion
 
         private System.Windows.Forms.Panel First_Layer;
-        private System.Windows.Forms.Panel Screen;
+        private System.Windows.Forms.Panel BackScreen;
         private System.Windows.Forms.Panel GameScreen;
         private System.Windows.Forms.Button ShowManual;
         private System.Windows.Forms.MenuStrip DropMenu;
@@ -162,7 +164,7 @@ namespace Find_the_Mines
         private System.Windows.Forms.ToolStripMenuItem Game;
         private System.Windows.Forms.ToolStripMenuItem Setting;
         private System.Windows.Forms.ToolStripMenuItem Infomation;
-        private System.Windows.Forms.ToolStripMenuItem Difficulty;
+        private System.Windows.Forms.ToolStripMenuItem OptionButton;
         private System.Windows.Forms.ToolStripMenuItem 게임정보ToolStripMenuItem;
     }
 }

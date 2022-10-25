@@ -37,7 +37,13 @@ namespace Find_the_Mines
             this.OKButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SoundCheckBox = new System.Windows.Forms.CheckBox();
+            this.Resolution = new System.Windows.Forms.GroupBox();
+            this.Res1152x864 = new System.Windows.Forms.RadioButton();
+            this.Res1024x768 = new System.Windows.Forms.RadioButton();
+            this.Res640x480 = new System.Windows.Forms.RadioButton();
+            this.ResFull = new System.Windows.Forms.RadioButton();
             this.Difficulty.SuspendLayout();
+            this.Resolution.SuspendLayout();
             this.SuspendLayout();
             // 
             // Difficulty
@@ -46,9 +52,9 @@ namespace Find_the_Mines
             this.Difficulty.Controls.Add(this.x24Button);
             this.Difficulty.Controls.Add(this.x16Button);
             this.Difficulty.Controls.Add(this.x12Button);
-            this.Difficulty.Location = new System.Drawing.Point(23, 25);
+            this.Difficulty.Location = new System.Drawing.Point(12, 12);
             this.Difficulty.Name = "Difficulty";
-            this.Difficulty.Size = new System.Drawing.Size(451, 180);
+            this.Difficulty.Size = new System.Drawing.Size(408, 180);
             this.Difficulty.TabIndex = 0;
             this.Difficulty.TabStop = false;
             this.Difficulty.Text = "플레이 세트";
@@ -99,7 +105,7 @@ namespace Find_the_Mines
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(247, 353);
+            this.OKButton.Location = new System.Drawing.Point(207, 524);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(100, 25);
             this.OKButton.TabIndex = 0;
@@ -109,7 +115,7 @@ namespace Find_the_Mines
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(374, 353);
+            this.CancelButton.Location = new System.Drawing.Point(322, 524);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(100, 25);
             this.CancelButton.TabIndex = 1;
@@ -122,17 +128,79 @@ namespace Find_the_Mines
             this.SoundCheckBox.AutoSize = true;
             this.SoundCheckBox.Checked = true;
             this.SoundCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SoundCheckBox.Location = new System.Drawing.Point(62, 226);
+            this.SoundCheckBox.Location = new System.Drawing.Point(12, 402);
             this.SoundCheckBox.Name = "SoundCheckBox";
             this.SoundCheckBox.Size = new System.Drawing.Size(78, 19);
             this.SoundCheckBox.TabIndex = 2;
             this.SoundCheckBox.Text = "소리 켜기";
             this.SoundCheckBox.UseVisualStyleBackColor = true;
             // 
+            // Resolution
+            // 
+            this.Resolution.Controls.Add(this.Res1152x864);
+            this.Resolution.Controls.Add(this.Res1024x768);
+            this.Resolution.Controls.Add(this.Res640x480);
+            this.Resolution.Controls.Add(this.ResFull);
+            this.Resolution.Location = new System.Drawing.Point(12, 211);
+            this.Resolution.Name = "Resolution";
+            this.Resolution.Size = new System.Drawing.Size(408, 168);
+            this.Resolution.TabIndex = 0;
+            this.Resolution.TabStop = false;
+            this.Resolution.Text = "해상도 설정";
+            // 
+            // Res1152x864
+            // 
+            this.Res1152x864.AutoSize = true;
+            this.Res1152x864.Location = new System.Drawing.Point(36, 60);
+            this.Res1152x864.Name = "Res1152x864";
+            this.Res1152x864.Size = new System.Drawing.Size(88, 19);
+            this.Res1152x864.TabIndex = 3;
+            this.Res1152x864.TabStop = true;
+            this.Res1152x864.Text = "1152 x 864";
+            this.Res1152x864.UseVisualStyleBackColor = true;
+            this.Res1152x864.CheckedChanged += new System.EventHandler(this.Res1152x864_CheckedChanged);
+            // 
+            // Res1024x768
+            // 
+            this.Res1024x768.AutoSize = true;
+            this.Res1024x768.Location = new System.Drawing.Point(36, 85);
+            this.Res1024x768.Name = "Res1024x768";
+            this.Res1024x768.Size = new System.Drawing.Size(88, 19);
+            this.Res1024x768.TabIndex = 2;
+            this.Res1024x768.TabStop = true;
+            this.Res1024x768.Text = "1024 x 768";
+            this.Res1024x768.UseVisualStyleBackColor = true;
+            this.Res1024x768.CheckedChanged += new System.EventHandler(this.Res1024x768_CheckedChanged);
+            // 
+            // Res640x480
+            // 
+            this.Res640x480.AutoSize = true;
+            this.Res640x480.Location = new System.Drawing.Point(36, 110);
+            this.Res640x480.Name = "Res640x480";
+            this.Res640x480.Size = new System.Drawing.Size(81, 19);
+            this.Res640x480.TabIndex = 1;
+            this.Res640x480.TabStop = true;
+            this.Res640x480.Text = "640 x 480";
+            this.Res640x480.UseVisualStyleBackColor = true;
+            this.Res640x480.CheckedChanged += new System.EventHandler(this.Res640x480_CheckedChanged);
+            // 
+            // ResFull
+            // 
+            this.ResFull.AutoSize = true;
+            this.ResFull.Location = new System.Drawing.Point(36, 35);
+            this.ResFull.Name = "ResFull";
+            this.ResFull.Size = new System.Drawing.Size(100, 19);
+            this.ResFull.TabIndex = 0;
+            this.ResFull.TabStop = true;
+            this.ResFull.Text = "전체화면(Full)";
+            this.ResFull.UseVisualStyleBackColor = true;
+            this.ResFull.CheckedChanged += new System.EventHandler(this.ResFull_CheckedChanged);
+            // 
             // GameOption
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(500, 400);
+            this.ClientSize = new System.Drawing.Size(434, 561);
+            this.Controls.Add(this.Resolution);
             this.Controls.Add(this.SoundCheckBox);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OKButton);
@@ -142,6 +210,8 @@ namespace Find_the_Mines
             this.Text = "설정";
             this.Difficulty.ResumeLayout(false);
             this.Difficulty.PerformLayout();
+            this.Resolution.ResumeLayout(false);
+            this.Resolution.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +227,10 @@ namespace Find_the_Mines
         private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.RadioButton x32Button;
         private System.Windows.Forms.CheckBox SoundCheckBox;
+        private System.Windows.Forms.GroupBox Resolution;
+        private System.Windows.Forms.RadioButton Res1024x768;
+        private System.Windows.Forms.RadioButton Res640x480;
+        private System.Windows.Forms.RadioButton ResFull;
+        private System.Windows.Forms.RadioButton Res1152x864;
     }
 }
