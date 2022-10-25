@@ -19,49 +19,5 @@ namespace Find_the_Mines
             LayerSet(); // 초기 패널 설정
             Console.WriteLine("Main 폼 실행됨."); //Debug
         }
-        private void MainForm_SizeChanged(object sender, EventArgs e)
-        {
-            LayerSet();
-        }
-        private void ShowManual_Click(object sender, EventArgs e)
-        {
-            Form Man = Application.OpenForms["Manual"];
-            if (Man == null)
-            {
-                Manual manual = new Manual(400, 400);
-                manual.Show();
-            }
-            else Man.BringToFront();
-        }
-        private void OptionButton_Click(object sender, EventArgs e)
-        {
-            Form Opt = Application.OpenForms["GameOption"];
-            if (Opt == null)
-            {
-                GameOption Option = new GameOption();
-                Option.Owner = this;
-                Option.StartPosition = FormStartPosition.CenterParent;
-                Option.SetBoard(BoardSize, IsSound, this.ClientSize);
-                Option.OptionReturnSetting += OptionToMainSetting;
-                Option.ShowDialog();
-            }
-            else Opt.BringToFront();
-        }
-
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch(e.KeyCode)
-            {
-                case Keys.Control:
-                    switch(e.KeyCode)
-                    {
-                        case Keys.O:
-                            Console.WriteLine("key : {0}", e.KeyCode);
-                            this.OptionButton.Click += new System.EventHandler(this.OptionButton_Click);
-                            break;
-                    }
-                    break;
-            }
-        }
     }
 }

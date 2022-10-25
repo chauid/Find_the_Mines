@@ -28,24 +28,27 @@ namespace Find_the_Mines
                 labels[i].Size = new Size(backpanel.Width * 45 / 50, labels[i].Size.Height);
             }
         }
-        public Manual(int width, int height)
+
+        public Manual(int width = 400, int height = 400)
         {
             InitializeComponent();
-            this.ClientSize = new Size(width, height);
+         
             
             int rules = 10; // 규칙 개수
             Label[] labels = new Label[rules];
             string[] rulestr = new string[rules];
-            rulestr[0] = "1. 두 플레이어가 번갈아가며 보드에서 원하는 곳을 클릭";
+            rulestr[0] = "1. 두 플레이어가 번갈아가며 보드에서 원하는 곳을 클릭해주세요.";
             rulestr[1] = "1-1. 클릭 시 모양 +와 × 중 선택";
-            rulestr[2] = "";
-            rulestr[3] = "";
-            rulestr[4] = "";
-            rulestr[5] = "";
-            rulestr[6] = "";
-            rulestr[7] = "";
+            rulestr[2] = "내용";
+            rulestr[3] = "추가";
+            rulestr[4] = "예정";
+            rulestr[5] = "입니";
+            rulestr[6] = "다용";
+            rulestr[7] = "ㅎㅎ";
             rulestr[8] = "";
-            rulestr[9] = "aa";
+            rulestr[9] = "";
+
+    
 
             int iteration = rules;
             for (int i = 0; i < rules; i++)
@@ -59,10 +62,17 @@ namespace Find_the_Mines
                 this.backpanel.Controls.Add(labels[i]);
             }
             Labelset(labels);
+            int Max_fontsize = 0;
+            int Max_width_labelinedex = 0;
             for (int i = 0; i < rules; i++) labels[i].Text = rulestr[i];
             for (int i = 0; i < rules; i++) Console.WriteLine("{0},\"{1}\"\n", labels[i].Name, labels[i].Text); //Debug
+            for (int i = 0; i < rules; i++) if (Max_fontsize < labels[i].Width) { Max_fontsize = labels[i].Width; Max_width_labelinedex = i; }
+            width_change(Max_fontsize, height, labels[Max_width_labelinedex].Width);
+
+
             Console.WriteLine("Manual 폼 실행됨."); //Debug
         }
+
         private void Manual_SizeChanged(object sender, EventArgs e)
         {
             Layerset();
@@ -72,5 +82,12 @@ namespace Find_the_Mines
         {
             Console.WriteLine("Manual 폼 종료됨."); //Debug
         }
+
+        public void width_change(int width, int height , int backpanel_width)
+        {
+            Console.WriteLine(backpanel_width);
+            this.ClientSize = new Size(width + backpanel_width-100, height+200); 
+        }
+
     }
 }
