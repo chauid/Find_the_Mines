@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Documents\\GitHub\\temp\\master\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj": {}
+    "C:\\Users\\USER\\Documents\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Documents\\GitHub\\temp\\master\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj": {
+    "C:\\Users\\USER\\Documents\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\temp\\master\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
         "projectName": "Find_the_Mines",
-        "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\temp\\master\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
+        "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\temp\\master\\Find_the_Mines\\Find_the_Mines\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\Find_the_Mines\\Find_the_Mines\\Find_the_Mines\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
