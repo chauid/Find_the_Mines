@@ -39,12 +39,12 @@ namespace Find_the_Mines
             string[] rulestr = new string[rules];
             rulestr[0] = "1. 두 플레이어가 번갈아가며 보드에서 원하는 곳을 클릭해주세요.";
             rulestr[1] = "1-1. 클릭 시 모양 +와 × 중 선택";
-            rulestr[2] = "";
-            rulestr[3] = "";
-            rulestr[4] = "";
-            rulestr[5] = "";
-            rulestr[6] = "";
-            rulestr[7] = "";
+            rulestr[2] = "내용";
+            rulestr[3] = "추가";
+            rulestr[4] = "예정";
+            rulestr[5] = "입니";
+            rulestr[6] = "다용";
+            rulestr[7] = "ㅎㅎ";
             rulestr[8] = "";
             rulestr[9] = "";
 
