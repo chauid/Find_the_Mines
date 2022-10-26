@@ -20,7 +20,7 @@ namespace Find_the_Mines
             }
             base.Dispose(disposing);
         }
-
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -38,7 +38,6 @@ namespace Find_the_Mines
             this.BackScreen = new System.Windows.Forms.Panel();
             this.GameScreen = new System.Windows.Forms.Panel();
             this.DropMenu = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Game = new System.Windows.Forms.ToolStripMenuItem();
             this.Setting = new System.Windows.Forms.ToolStripMenuItem();
             this.OptionButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,7 +126,6 @@ namespace Find_the_Mines
             // DropMenu
             // 
             this.DropMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
             this.Game,
             this.Setting,
             this.Infomation});
@@ -136,11 +134,6 @@ namespace Find_the_Mines
             this.DropMenu.Size = new System.Drawing.Size(996, 24);
             this.DropMenu.TabIndex = 3;
             this.DropMenu.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
             // Game
             // 
@@ -206,7 +199,6 @@ namespace Find_the_Mines
         private System.Windows.Forms.Panel GameScreen;
         private System.Windows.Forms.Button ShowManual;
         private System.Windows.Forms.MenuStrip DropMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem Game;
         private System.Windows.Forms.ToolStripMenuItem Setting;
         private System.Windows.Forms.ToolStripMenuItem Infomation;

@@ -15,22 +15,23 @@ namespace Find_the_Mines
         private int BoardSize = 12; //기본보드판 크기 : 12 x 12
         private bool IsSound = true; // 사운드 기본값 : 켜기
         private Size Resolution; // 기본 해상도 1024x768
-        private void OptionToMainSetting(int size, bool sound, Size resolution) // 옵션값 전달 이벤트 핸들러
+        private void OptionToMainSetting(int size, bool sound, Size resolution) // 옵션값 받아오기 메소드
         {
             BoardSize = size;
             IsSound = sound;
             Resolution = resolution;
             ClientSize = resolution;
-            if(ClientSize.Width == Screen.PrimaryScreen.Bounds.Width) // 전체화면
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
+
+            // 전체화면
+            if(ClientSize.Width == Screen.PrimaryScreen.Bounds.Width) this.WindowState = FormWindowState.Maximized;
             else this.WindowState = FormWindowState.Normal;
+
+            // Debug
             Console.WriteLine("현재 보드 크기 : {0}", BoardSize);
             Console.WriteLine("현재 소리 켜기 : {0}", IsSound);
             Console.WriteLine("현재 해상도 : {0}", Resolution);
         }
-        private void LayerSet()
+        private void LayerSet() // 화면 내의 객체 위치 초기화
         {
             // 색깔 정의
             Color BackGroundColor = Color.FromArgb(242, 242, 242);
@@ -60,7 +61,7 @@ namespace Find_the_Mines
 
 
         /// <summary>
-        /// Event Handler 이벤트 처리
+        /// MainForm 이벤트 처리
         /// </summary>
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
@@ -76,22 +77,22 @@ namespace Find_the_Mines
             }
             else Man.BringToFront();
         }
-        private void OptionButton_Click(object sender, EventArgs e)
+        private void OptionButton_Click(object sender, EventArgs e) // 게임 옵션 버튼
         {
             Form Opt = Application.OpenForms["GameOption"];
             if (Opt == null)
             {
                 GameOption Option = new GameOption();
                 Option.Owner = this;
-                Option.StartPosition = FormStartPosition.CenterParent;
-                Option.SetBoard(BoardSize, IsSound, this.ClientSize);
+                Option.StartPosition = FormStartPosition.CenterParent; // 부모 폼 중앙에 자식 폼 배치
+                Option.SetBoard(BoardSize, IsSound, ClientSize);
                 Option.OptionReturnSetting += OptionToMainSetting;
                 Option.ShowDialog();
             }
             else Opt.BringToFront();
         }
 
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        private void MainForm_KeyDown(object sender, KeyEventArgs e) // 단축키 설정
         {
             switch (e.KeyCode)
             {

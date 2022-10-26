@@ -42,6 +42,7 @@ namespace Find_the_Mines
             this.Res1024x768 = new System.Windows.Forms.RadioButton();
             this.Res640x480 = new System.Windows.Forms.RadioButton();
             this.ResFull = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Difficulty.SuspendLayout();
             this.Resolution.SuspendLayout();
             this.SuspendLayout();
@@ -126,14 +127,13 @@ namespace Find_the_Mines
             // SoundCheckBox
             // 
             this.SoundCheckBox.AutoSize = true;
-            this.SoundCheckBox.Checked = true;
-            this.SoundCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SoundCheckBox.Location = new System.Drawing.Point(12, 402);
+            this.SoundCheckBox.Location = new System.Drawing.Point(12, 385);
             this.SoundCheckBox.Name = "SoundCheckBox";
             this.SoundCheckBox.Size = new System.Drawing.Size(78, 19);
             this.SoundCheckBox.TabIndex = 2;
             this.SoundCheckBox.Text = "소리 켜기";
             this.SoundCheckBox.UseVisualStyleBackColor = true;
+            this.SoundCheckBox.CheckedChanged += new System.EventHandler(this.SoundCheckBox_CheckedChanged);
             // 
             // Resolution
             // 
@@ -232,5 +232,6 @@ namespace Find_the_Mines
         private System.Windows.Forms.RadioButton Res640x480;
         private System.Windows.Forms.RadioButton ResFull;
         private System.Windows.Forms.RadioButton Res1152x864;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
