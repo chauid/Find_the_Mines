@@ -13,10 +13,9 @@ namespace Find_the_Mines
         private int setBoardSize;
         private bool IsSound;
         private Size CurrentResolution;
-        public delegate void SendSetting(int size, bool sound, Size resolution);
-        public event SendSetting OptionReturnSetting;
-
-        public void SetBoard(int size, bool sound, Size resolution)
+        public delegate void SendSetting(int size, bool sound, Size resolution); //옵션->메인 이벤트 핸들러 선언
+        public event SendSetting OptionReturnSetting; // 옵션->메인 이벤트 선언
+        public void SetBoard(int size, bool sound, Size resolution) // 메인폼->옵션폼 값 받아오기
         {
             setBoardSize = size;
             switch(setBoardSize)
@@ -52,11 +51,10 @@ namespace Find_the_Mines
                     ResFull.Checked = true;
                     break;
             }
-            
             IsSound = sound;
-            SoundCheckBox.Checked = IsSound;
+            SoundCheckBox.Checked = this.IsSound;
         }
-        private void LayerSet()
+        private void LayerSet() // 화면 내의 객체 위치 초기화
         {
             // 색깔 정의
             Color BackGroundColor = Color.FromArgb(242, 242, 242);
@@ -76,6 +74,64 @@ namespace Find_the_Mines
             Res1024x768.Location = new Point(Difficulty.Size.Width * 5 / 50, Difficulty.Size.Height * 30 / 50);
             Res640x480.Location = new Point(Difficulty.Size.Width * 5 / 50, Difficulty.Size.Height * 40 / 50);
 
+        }
+
+        /// <summary>
+        /// GameOption 이벤트 처리
+        /// </summary>
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            this.OptionReturnSetting(setBoardSize, IsSound, CurrentResolution); // 델리게이트를 이용하여 메인 폼에 이벤트(값) 전달
+            Close();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void x12Button_CheckedChanged(object sender, EventArgs e)
+        {
+            setBoardSize = 12;
+        }
+
+        private void x16Button_CheckedChanged(object sender, EventArgs e)
+        {
+            setBoardSize = 16;
+        }
+
+        private void x24Button_CheckedChanged(object sender, EventArgs e)
+        {
+            setBoardSize = 24;
+        }
+
+        private void x32Button_CheckedChanged(object sender, EventArgs e)
+        {
+            setBoardSize = 32;
+        }
+
+        private void ResFull_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentResolution = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+        }
+
+        private void Res1152x864_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentResolution = new Size(1152, 864);
+        }
+
+        private void Res1024x768_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentResolution = new Size(1024, 768);
+        }
+
+        private void Res640x480_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentResolution = new Size(640, 480);
+        }
+        private void SoundCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            IsSound = SoundCheckBox.Checked;
         }
     }
 }

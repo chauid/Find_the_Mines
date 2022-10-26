@@ -36,35 +36,30 @@ namespace Find_the_Mines
             
             int rules = 10; // 규칙 개수
             Label[] labels = new Label[rules];
-            string[] rulestr = new string[rules];
-            rulestr[0] = "1. 두 플레이어가 번갈아가며 보드에서 원하는 곳을 클릭해주세요.";
-            rulestr[1] = "1-1. 클릭 시 모양 +와 × 중 선택";
-            rulestr[2] = "내용";
-            rulestr[3] = "추가";
-            rulestr[4] = "예정";
-            rulestr[5] = "입니";
-            rulestr[6] = "다용";
-            rulestr[7] = "ㅎㅎ";
-            rulestr[8] = "";
-            rulestr[9] = "";
-
-    
-
-            int iteration = rules;
-            for (int i = 0; i < rules; i++)
+            for (int i = 0; i < rules; i++) // 라벨 배열 초기화
             {
                 labels[i] = new Label();
                 labels[i].Padding = new System.Windows.Forms.Padding(5);
                 labels[i].AutoSize = true;
                 labels[i].Name = "label" + i;
                 labels[i].TabIndex = 0;
-                labels[i].BringToFront();
                 this.backpanel.Controls.Add(labels[i]);
             }
+            // 라벨 배열 텍스트
+            labels[0].Text = "1. 두 플레이어가 번갈아가며 보드에서 원하는 곳을 클릭해주세요.";
+            labels[1].Text = "1-1. 클릭 시 모양 +와 × 중 선택";
+            labels[2].Text = "내용";
+            labels[3].Text = "추가";
+            labels[4].Text = "예정";
+            labels[5].Text = "입니";
+            labels[6].Text = "다용";
+            labels[7].Text = "ㅎㅎ";
+            labels[8].Text = "";
+            labels[9].Text = "";
+
             Labelset(labels);
             int Max_fontsize = 0;
             int Max_width_labelinedex = 0;
-            for (int i = 0; i < rules; i++) labels[i].Text = rulestr[i];
             for (int i = 0; i < rules; i++) Console.WriteLine("{0},\"{1}\"\n", labels[i].Name, labels[i].Text); //Debug
             for (int i = 0; i < rules; i++) if (Max_fontsize < labels[i].Width) { Max_fontsize = labels[i].Width; Max_width_labelinedex = i; }
             width_change(Max_fontsize, height, labels[Max_width_labelinedex].Width);
